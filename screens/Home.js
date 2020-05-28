@@ -19,33 +19,22 @@ import {
 } from 'react-native';
 import {Card,FAB  } from 'react-native-paper';
 
-const Home = () => {
+const Home = (props) => {
   const data=[
-    {id:1,name:"a",position:"web"},
-    {id:2,name:"b",position:"mobile"},
-    {id:3,name:"c",position:"web"},
-    {id:5,name:"d",position:"mobile"},
-    {id:6,name:"e",position:"mobile"},
-    {id:7,name:"f",position:"mobile"},
-    {id:8,name:"g",position:"mobile"},
-    {id:9,name:"h",position:"mobile"},
-    {id:10,name:"i",position:"mobile"},
-    {id:11,name:"j",position:"mobile"},
-    {id:12,name:"k",position:"mobile"},
-    {id:13,name:"l",position:"mobile"},
-    {id:14,name:"m",position:"mobile"},
-    {id:15,name:"n",position:"mobile"},
-    {id:16,name:"o",position:"mobile"},
-    
-    
+    {id:1,name:"amal perera",position:"web", email:"amal@gmail.com",salary:"30000", phone:"12345323",picture:"https://images.unsplash.com/flagged/photo-1577351285836-19ff13f8e615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60"},
+    {id:2,name:"bimal",position:"mobile", email:"bimal@gmail.com",salary:"30000", phone:"12345323",picture:"https://images.unsplash.com/flagged/photo-1577351285836-19ff13f8e615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60"},
+    {id:3,name:"camal",position:"web", email:"camal@gmail.com",salary:"30000", phone:"12345323",picture:"https://images.unsplash.com/flagged/photo-1577351285836-19ff13f8e615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60"},
+    {id:4,name:"damal",position:"mobile", email:"damal@gmail.com",salary:"30000", phone:"12345323",picture:"https://images.unsplash.com/flagged/photo-1577351285836-19ff13f8e615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60"},
+   
 
     
 
   ]
   const renderList=((item)=>{
     return(
-      <Card style={styles.mycard} >
-      <View style={styles.cardview}>
+      <Card style={styles.mycard} 
+      onPress={()=>props.navigation.navigate("Profile",{item})}> 
+           <View style={styles.cardview}>
       <Image
       style={{width:60,height:60,borderRadius:30}}
       source={{uri:"https://images.unsplash.com/flagged/photo-1577351285836-19ff13f8e615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60"}}
@@ -66,21 +55,21 @@ const Home = () => {
     )
   })
   return (
-  <View>
+  <View style={{flex:1}}>
     <FlatList
     data={data}
     renderItem={({item})=>{
       return renderList(item)
     }}
-    keyExtractor={item=>`${item.id}`}
+    keyExtractor={item=>item.id}
 
     />
     <FAB
     style={styles.fab}
     small={false}
-    theme={{colors:{accent:"green"}}}
+    theme={{colors:{accent:"#2c3485"}}}
     icon="plus"
-    onPress={() => console.log('Pressed')}
+    onPress={() => props.navigation.navigate("Employee")}
   />
   </View>
   );
