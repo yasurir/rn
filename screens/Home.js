@@ -21,21 +21,21 @@ import {Card,FAB  } from 'react-native-paper';
 
 const Home = () => {
   const data=[
-    {id:1,name:"mingyu",position:"web"},
-    {id:2,name:"joshua",position:"mobile"},
-    {id:3,name:"dk",position:"web"},
-    {id:5,name:"hi",position:"mobile"},
-    {id:6,name:"hi",position:"mobile"},
-    {id:7,name:"hi",position:"mobile"},
-    {id:8,name:"hi",position:"mobile"},
-    {id:9,name:"hi",position:"mobile"},
-    {id:10,name:"hi",position:"mobile"},
-    {id:11,name:"hi",position:"mobile"},
-    {id:12,name:"hi",position:"mobile"},
-    {id:13,name:"hi",position:"mobile"},
-    {id:14,name:"hi",position:"mobile"},
-    {id:15,name:"hi",position:"mobile"},
-    {id:16,name:"hi",position:"mobile"},
+    {id:1,name:"a",position:"web"},
+    {id:2,name:"b",position:"mobile"},
+    {id:3,name:"c",position:"web"},
+    {id:5,name:"d",position:"mobile"},
+    {id:6,name:"e",position:"mobile"},
+    {id:7,name:"f",position:"mobile"},
+    {id:8,name:"g",position:"mobile"},
+    {id:9,name:"h",position:"mobile"},
+    {id:10,name:"i",position:"mobile"},
+    {id:11,name:"j",position:"mobile"},
+    {id:12,name:"k",position:"mobile"},
+    {id:13,name:"l",position:"mobile"},
+    {id:14,name:"m",position:"mobile"},
+    {id:15,name:"n",position:"mobile"},
+    {id:16,name:"o",position:"mobile"},
     
     
 

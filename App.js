@@ -20,13 +20,15 @@ import {
 } from 'react-native';
 import Home  from './screens/Home'
 import Employee  from './screens/Employee'
+import Profile  from './screens/Profile'
 
 
 export default function App(){
   return (
   <View style={styles.container}>
  {/* <Home/> */}
- <Employee/>
+ {/* <Employee/> */}
+ <Profile/>
   </View>
   );
 };
